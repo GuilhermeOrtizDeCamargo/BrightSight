@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora financeira</title>
+</head>
+<body>
+    <h1><u>Calculadora financeira</u></h1>
+    <h2>O nosso projeto envolve a venda por varejo de sensores de luz LDR e a manutenção mensal dos mesmo, no entanto isso acontece de forma indireta,<br> você compra o nosso produto e o revende para o usuário, fornecendo uma grande margem de lucro.</h2><br>
+    <h2>Caso a quantidade de sensores seja maior que 25, 50 ou 100, um desconto é aplicado</h2>
+<br><br>
+Quantos sensores o seu cliente deseja comprar?
+<input type="number" id="qtdSensores"><br>
+Quantos porcento você deseja lucrar sobre isso?
+<input type="number" id="PercentualLucro"><br><br>
+<button onclick="Lucro()">Calcular lucro</button><br><br>
+<div id="div_lucro"></div>
+
+
+</body>
+</html>
+<script>
+    function Lucro(){
+        if ( qtdSensores.value <= 0 ){
+            alert("Insira uma quantidade positiva de sensores")
+        } else if (PercentualLucro.value <= 0){
+            alert("Você não terá lucro caso insira esse percentual")
+        } else{
+            var preçoarduino = qtdSensores.value * 50 
+            var varsensores = 20 
+           if (qtdSensores.value >=100){
+                    varsensores = 7.5
+            } else if (qtdSensores.value >= 50) {
+                varsensores = 10
+            }  else if (qtdSensores.value >= 25){
+                varsensores = 15
+            }
+            var manutenção = 2000 + (qtdSensores.value * varsensores)
+            var preçototal = preçoarduino + manutenção
+            var GrandesLucros = ((preçototal * (Number(PercentualLucro.value)/100 + 1)) - preçototal)
+            div_lucro.innerHTML  = `
+        <h4>Ao comprar ${qtdSensores.value} sensores, você gastará R$${preçoarduino}, e os R$${manutenção} à manutenção e atendimento, totalizando R$${manutenção + preçoarduino}. <br>Porém ao vende-los por R$${preçoarduino * (Number(PercentualLucro.value)/100 + 1)} e cobrar  R$${manutenção * (Number(PercentualLucro.value)/100 + 1)} há uma margem de lucro de R$${GrandesLucros} no primeiro mês e R$${((manutenção * (Number(PercentualLucro.value)/100 + 1)) - manutenção)} nos próximos meses.</4>`
+        }
+    }
+</script>
