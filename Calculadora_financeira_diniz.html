@@ -40,7 +40,7 @@ Quantos porcento você deseja lucrar sobre isso?
             var preçototal = preçoarduino + manutenção
             var GrandesLucros = ((preçototal * (Number(PercentualLucro.value)/100 + 1)) - preçototal)
             div_lucro.innerHTML  = `
-        <h4>Ao comprar ${qtdSensores.value} sensores, você gastará R$${preçoarduino}, e os R$${manutenção} à manutenção e atendimento, totalizando R$${manutenção + preçoarduino}. <br>Porém ao vende-los por R$${preçoarduino * (Number(PercentualLucro.value)/100 + 1)} e cobrar  R$${manutenção * (Number(PercentualLucro.value)/100 + 1)} há uma margem de lucro de R$${GrandesLucros} no primeiro mês e R$${((manutenção * (Number(PercentualLucro.value)/100 + 1)) - manutenção)} nos próximos meses.</4>`
+        <h4>Ao comprar ${qtdSensores.value} sensores, você gastará R$${preçoarduino} com eles, mais R$${manutenção} para manutenção e atendimento, totalizando R$${manutenção + preçoarduino}. <br>Porém caso você venda os sensores por R$${preçoarduino * (Number(PercentualLucro.value)/100 + 1)} e cobrar  R$${manutenção * (Number(PercentualLucro.value)/100 + 1)} pela manutenção, há uma margem de lucro de R$${GrandesLucros} no primeiro mês e R$${((manutenção * (Number(PercentualLucro.value)/100 + 1)) - manutenção)} nos próximos meses.</4>`
         }
     }
 </script>
