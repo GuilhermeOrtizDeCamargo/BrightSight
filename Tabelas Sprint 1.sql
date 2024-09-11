@@ -1,4 +1,4 @@
-Create database BrightSight;
+CREATE DATABASE BrightSight;
 
 USE BrightSight;
 
@@ -12,23 +12,16 @@ email varchar(255) NOT NULL,
 númeroTelefonico char(11) NOT NULL
 );
 
+INSERT INTO DadosCliente VALUES
+(default,'WorkHard', 02177090,399, 80985284000151,'WorkHard@gmail.com',11995247192),
+(default,'NutriAgro',12927044,212,14534329000147,'AgroNutriCorp@hotmail.com','20212409'),
+(default,'BigFarma',53404-325,1037,49045027000190,'FarmaBusiness@outlook.com',8194357622);
+
 CREATE TABLE DadosSensor(
 idDado int primary key auto_increment,
 DiaEHora datetime,
 Luminosidade int
 );
-
-CREATE TABLE Região(
-idArduíno int primary key auto_increment,
-NomeRegião varchar(40),
-EspaçoM² int,
-Média int
-);
-
-INSERT INTO DadosCliente VALUES
-(default,'WorkHard', 02177090,399, 80985284000151,'WorkHard@gmail.com',11995247192),
-(default,'NutriAgro',12927044,212,14534329000147,'AgroNutriCorp@hotmail.com','20212409'),
-(default,'BigFarma',53404-325,1037,49045027000190,'FarmaBusiness@outlook.com',8194357622);
 
 INSERT INTO  DadosSensor VALUES
 (default,'2024-09-02 12:09:38',957),
@@ -39,12 +32,16 @@ INSERT INTO  DadosSensor VALUES
 (default,'2024-09-09 04:03:49',217),
 (default,'2024-09-09 13:43:49',916);
 
+CREATE TABLE Região(
+idArduino int primary key auto_increment,
+NomeRegião varchar(40),
+EspaçoM² int,
+Média int
+);
+
 INSERT INTO Região VALUES
 (default,'Nordeste',200,697),
 (default,'Sudeste',300,721),
 (default,'Sul','250',873),
 (default,'Norte','120','315'),
 (default,'Leste','400','913');
-
-
-
