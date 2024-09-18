@@ -9,12 +9,11 @@ Nosso grupo foi formado para atender as soluções de tecnologia das empresas on
 
 ## Colaboradores
 - Enrico D'Amaro
+- Gabriel de Oliveira Santos
 - Guilgerme Ortiz de Camargo
-- Matheus Marques
-- Matheus Nocelli
-- Matheus Saldanha
-- Robert Ferreira
-- Rodrigo Ward
+- Kaio Gabriel Lemos Ricz
+- Isabela de Carvalho Francisco
+- Vinicius Dias
 
 ## Parceiros Tecnológicos
 - <a href="https://www.sptech.school/">
